@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<title> Movie Site</title>
+<link rel="stylesheet" href="style.css">
+
+<form action="/start" method="POST">
+    <label for="naam">Naam: </label>
+    <input
+        type="text"
+        id="naam"
+        name="naam"
+        placeholder="The Titanic"
+        required
+    />
+
+    <br>
+
+    <label for="jaar">Releasejaar: </label>
+    <input
+        type="number"
+        id="jaar"
+        name="jaar"
+        placeholder="0000"
+        required
+    />
+
+    <button type="submit">Toevoegen</button>
+</form> 
+
+<section>
+    <% for (let i = 0; i < boek.length; i++) { %>
+        <p>
+            <%= boek[i].naam %> - <%= boek[i].jaar %>
+        </p>
+    <% } %>
+</section>
+
+
+<p><a href="/">Back to list</a></p>
